@@ -4,6 +4,14 @@ Conway's Game of Life running in a Streamlit app.
 
 ![Demo](assets/demo.gif)
 
+## Run
+
+```bash
+docker compose up --build
+```
+
+Open [http://localhost:8501](http://localhost:8501), set the grid size and starting cells, then click **Run**.
+
 ## How it works
 
 The simulation runs step by step. Each step, only cells that are alive or next to an alive cell are checked. The result is a 2D matrix that gets rendered as an image and streamed to the browser.
@@ -22,14 +30,6 @@ frontend/
   plot.py       -- helper for plotting backend cell matrix
   app.py        -- Streamlit UI
 ```
-
-## Run
-
-```bash
-docker compose up --build
-```
-
-Open [http://localhost:8501](http://localhost:8501), set the grid size and starting cells, then click **Run**.
 
 ## Configuration
 
