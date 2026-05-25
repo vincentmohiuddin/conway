@@ -1,0 +1,20 @@
+[project]
+name = "conway"
+version = "0.1.0"
+description = "Conway's Game of Life"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "matplotlib>=3.9",
+    "pydantic>=2.13.4",
+    "streamlit>=1.45.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
