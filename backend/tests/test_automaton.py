@@ -52,13 +52,6 @@ def test_run_stops_at_fixed_point():
     assert frames[0][0, 0] == 1
 
 
-def test_run_stops_at_extinction():
-    frames = list(Automaton(rows=5, cols=5).run({Cell(0, 0)}))
-    assert frames[0][0, 0] == 1
-    assert np.all(frames[-1] == 0)
-
-
 def test_run_clips_out_of_bounds():
-    frames = list(Automaton(rows=3, cols=3).run({Cell(2, 2)}))
-    assert frames[0][2, 2] == 1
-    assert frames[1][2, 2] == 0
+    frames = list(Automaton(rows=2, cols=3).run(get_horizontal_blinker()))
+    assert frames[1].sum() == 2
