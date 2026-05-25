@@ -2,7 +2,7 @@
 
 Conway's Game of Life running in a Streamlit app.
 
-<video src="assets/demo.mov" controls></video>
+![Demo](assets/demo.gif)
 
 ## How it works
 
